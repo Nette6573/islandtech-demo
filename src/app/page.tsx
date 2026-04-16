@@ -1,12 +1,23 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-linear-to-br from-purple-100 via-pink-50 to-purple-200 text-gray-900">
+    <main className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-purple-200 text-gray-900">
 
       {/* NAVBAR */}
       <nav className="flex justify-between items-center px-6 py-5 bg-white/70 backdrop-blur-md shadow-sm sticky top-0 z-50">
-        <h1 className="text-2xl font-bold text-purple-600">
-          IslandTech Solutions
-        </h1>
+
+        <div className="flex items-center gap-2">
+          <Image
+            src="/logo.png"
+            alt="IslandTech Logo"
+            width={40}
+            height={40}
+          />
+          <span className="text-xl font-bold text-purple-600">
+            IslandTech
+          </span>
+        </div>
 
         <a
           href="/book"
@@ -44,7 +55,6 @@ export default function Home() {
           </a>
         </div>
 
-        {/* TRUST LINE */}
         <p className="mt-6 text-sm text-gray-500">
           Trusted solutions • Fast delivery • Built for real businesses
         </p>
@@ -128,7 +138,7 @@ export default function Home() {
 
       {/* CTA */}
       <section className="mt-32 text-center px-6 pb-24">
-        <div className="bg-linear-to-r from-purple-600 to-pink-500 text-white p-10 rounded-2xl max-w-3xl mx-auto shadow-lg">
+        <div className="bg-gradient-to-r from-purple-600 to-pink-500 text-white p-10 rounded-2xl max-w-3xl mx-auto shadow-lg">
 
           <h3 className="text-3xl font-bold mb-4">
             Ready to Get More Customers?
@@ -147,6 +157,16 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* WHATSAPP BUTTON */}
+      <a
+        href="https://wa.me/18764668034"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-lg font-semibold z-50"
+      >
+        Chat on WhatsApp
+      </a>
 
     </main>
   );
